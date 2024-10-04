@@ -11,19 +11,22 @@ import {
 import { useState } from "react";
 
 const TableComponent = (props) => {
+  const [allProducts] = useState(props.products); // Keep the original list of products
   const [products, setProducts] = useState(props.products);
   const [productName, setProductName] = useState("");
 
   function updateProducts(value) {
     setProductName(value);
-    // console.log(value);
-    console.log(products);
-    let updProducts = products.filter((prod) =>
-      // console.log(prod.name)
-      prod.name.toLowerCase().includes(value.toLowerCase())
-    );
-    setProducts(updProducts);
-    console.log("updated products", updProducts);
+
+    if (value === "") {
+      // If the search field is empty, reset products to the original list
+      setProducts(allProducts);
+    } else {
+      let updProducts = allProducts.filter((prod) =>
+        prod.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setProducts(updProducts);
+    }
   }
 
   return (
