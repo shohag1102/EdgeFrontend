@@ -1,6 +1,7 @@
 import FirstComponent from "./FirstComponent";
 
 const Component4 = (props) => {
+
   return (
     <div>
       {props.studentDetails.map((student) => (

@@ -1,4 +1,7 @@
 import Component4 from "./components/Component4";
+import ProductDetails from "./components/ProductDetails";
+import TableComponent from "./components/TableComponent";
+import Table from "./components/TableComponent";
 
 function App() {
   const studentDetails = [
@@ -23,9 +26,35 @@ function App() {
       age: 25,
     },
   ];
+
+  const products = [
+    {
+      id: 1,
+      name: "Bag",
+      desc: "lorem ipsum dolor sit amet, consectetur adip",
+    },
+    {
+      id: 2,
+      name: "Mobile",
+      desc: "lorem ipsum dolor sit amet, consectetur adipiscing",
+    },
+    {
+      id: 3,
+      name: "Laptop",
+      desc: "lorem ipsum dolor sit amet, consectetur ",
+    },
+    {
+      id: 4,
+      name: "Desktop",
+      desc: "lorem ipsum dolor sit amet, consectetur adipiscing dfahlshdf ehf hdljfaldj ",
+    },
+  ];
+
   return (
     <>
-      <Component4 studentDetails={studentDetails} />
+      {/* <Component4 studentDetails={studentDetails} /> */}
+      {/* <ProductDetails products={products}/> */}
+      <TableComponent products={products} />
     </>
   );
 }
