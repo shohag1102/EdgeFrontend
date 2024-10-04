@@ -1,9 +1,10 @@
-import Checkbox from "./components/component1/checkBox/Checkbox";
+import CheckboxComponent from "./components/component1/checkBox/Checkbox";
 import Textbox from "./components/component1/textBox/Textbox";
 import ButtonComponent from "./components/component2/button/ButtonComponent";
 import RadioButton from "./components/component2/radioButton/RadioButton";
 import AutoComplete from "./components/component3/autoComplete/AutoComplete";
 import Select from "./components/component3/select/SelectComponent";
+import FormComponent from "./components/FormComponent";
 import FourthComponent from "./components/FourthComponent";
 import ProductTable from "./components/ProductTable";
 import SecondComponent from "./components/SecondComponent";
@@ -55,6 +56,15 @@ function App() {
     },
   ];
 
+  const formElements = {
+    textBox: <Textbox />,
+    checkBox: <CheckboxComponent />,
+    radioButton: <RadioButton/>,
+    select: <Select />,
+    autoComplete: <AutoComplete />,
+    button: <ButtonComponent/>,
+  };
+
   return (
     // <div
     //   style={{
@@ -85,7 +95,8 @@ function App() {
     //   // FourthComponent={<FourthComponent />}
     //   student={student}
     // />
-    <ProductTable products={products} />
+    // <ProductTable products={products} />
+    <FormComponent formElements = {formElements}/> 
   );
 }
 
