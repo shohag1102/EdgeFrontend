@@ -1,5 +1,11 @@
+import Form from "./components/Form";
+import Search from "./components/Search";
+
 function App() {
-  return <p>Day 4</p>;
+  return <>
+    <Form/>
+    <Search/>
+  </>
 }
 
 export default App;
