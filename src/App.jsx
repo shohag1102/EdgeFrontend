@@ -3,8 +3,7 @@ import Search from "./components/Search";
 
 function App() {
   return <>
-    <Form/>
-    <Search/>
+    day 5
   </>
 }
 
