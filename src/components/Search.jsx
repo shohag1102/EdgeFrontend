@@ -9,7 +9,8 @@ const Search = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://10.19.88.229:8081/test_api//search.php${searchText ? `?query=${searchText}` : ''}`
+          // `http://10.19.88.229:8081/test_api//search.php${searchText ? `?query=${searchText}` : ''}`
+          `http://10.19.88.231:8081/test_api//search.php?${`query=${searchText}`}`
         );
         const data = await response.json();
         setResults(data.results);
